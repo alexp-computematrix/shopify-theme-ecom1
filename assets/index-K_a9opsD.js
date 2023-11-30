@@ -1,3 +1,5 @@
+import {SiteData} from "./SiteData.js";
+
 (function() {
 	const t = document.createElement("link").relList;
 	if (t && t.supports && t.supports("modulepreload")) return;
@@ -14359,7 +14361,7 @@ const fk = {
 	hk = async () => {
 		const e = new Date().setHours(0, 0, 0, 0);
 		if (eT()) return null;
-		const n = await (await fetch(`${window.location.origin}/assets/data.json`)).json();
+        const n = SiteData;
 		return {
 			...n,
 			languages: mk(n.languages, e)
